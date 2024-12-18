@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
+    <style>
+        /* Custom CSS Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #a0033f;
+        }
+
+        /* Header Styling */
+        .header {
+            position: relative;
+            height: 550px;
+            background: linear-gradient(rgba(175, 126, 126, 0.6), rgba(175, 126, 126, 0.6)), 
+                        url('/api/placeholder/1200/500') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: rgb(19, 18, 18);
+        }
+
+        .header-profile-img {
+            width: 250px;
+            height: 250px;
+            border-radius: 55%;
+            border: 5px solid white;
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .header-subtitle {
+            font-size: 1.5rem;
+            opacity: 0.8;
+        }
+
+        /* Sections Container */
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 50px 0;
+        }
+
+        /* About Section */
+        .about {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .about-image {
+            width: 40%;
+            margin-right: 50px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(236, 2, 205, 0.082);
+        }
+
+        .about-text {
+            width: 60%;
+        }
+
+        /* Projects Section */
+        .projects {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .project-card {
+            width: 30%;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 20px;
+        }
+
+        /* Skills Section */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .skill-badge {
+            background-color: #4a90e2;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            margin: 5px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .skill-badge:hover {
+            background-color: #357abd;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .about {
+                flex-direction: column;
+            }
+            .about-image, .about-text {
+                width: 100%;
+                margin-right: 0;
+            }
+            .project-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Anne Miranda - Personal Profile</title>
+            <style>
+                /* Reset and Base Styles */
+                body {
+                    font-family: 'Arial', sans-serif;
+                    background-color: #f4f4f4;
+                    margin: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    min-height: 100vh;
+                }
+        
+                /* Header Container */
+                .header {
+                    background-color: white;
+                    border-radius: 15px;
+                    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+                    width: 350px;
+                    text-align: center;
+                    padding: 30px;
+                    transition: transform 0.3s ease;
+                }
+        
+                .header:hover {
+                    transform: scale(1.02);
+                }
+        
+                /* Profile Image */
+                .header-profile-img {
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    border: 4px solid #640344;
+                    margin-bottom: 15px;
+                }
+        
+                /* Name */
+                .header h1 {
+                    color: #333;
+                    margin-bottom: 20px;
+                    font-size: 24px;
+                }
+        
+                /* Personal Info */
+                .header div {
+                    background-color: #f8f9fa;
+                    margin: 10px 0;
+                    padding: 10px;
+                    border-radius: 8px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+        
+                .header div strong {
+                    color: #b8057c;
+                }
+        
+                /* Social Links */
+                .social-links {
+                    display: flex;
+                    justify-content: center;
+                    gap: 15px;
+                    margin-top: 20px;
+                }
+        
+                .social-links a img {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    transition: transform 0.2s ease;
+                }
+        
+                .social-links a img:hover {
+                    transform: scale(1.1);
+                }
+            </style>
+        </head>
+        <body>
+            <!-- Header with Background Image -->
+            <header class="header">
+                <img src="images.2.jpg" alt="Profile Picture" class="header-profile-img">
+                <h1>Anne Miranda</h1>
+                <div>
+                    <strong>Name:</strong> 
+                    <span>Anne Miranda</span>
+                </div>
+                <div>
+                    <strong>Age:</strong> 
+                    <span>23</span>
+                </div>
+                <div>
+                    <strong>Phone:</strong> 
+                    <span>09636794234</span>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/15iWxuy9mw/?mibextid=LQQJ4d" target="_blank" rel="noopener noreferrer">
+                        <img src="images.10.jpg" alt="Facebook">
+                    </a>
+                    <a href="https://www.instagram.com/anncamiiiii?igsh=ZzRud21kbjBnOTFt&utm_source=qr" target="_blank" rel="noopener noreferrer">
+                        <img src="images.12.jpg" alt="Instagram">
+                    </a>
+                </div>
+            </header>
+        </body>
+        </html>
+
+    <div class="container">
+        <!-- About Section with Side Image -->
+        <section class="about">
+            <img src="images.jpg.jpg" alt="About Me" class="about-image">
+            <div class="about-text">
+                <h2>About Me</h2>
+            </p>
+                I'm Anne C. Miranda, a regular student pursuing a bachelor's degree in information technology at Westmead International School. Despite my lack of programming skills, I am familiar with basic websites, therefore I took this course because that is what I want to do.
+        </p>
+              
+            </div>
+        </section>
+
+        
+        <!-- Projects Section with Image Cards -->
+        <section class="container">
+            <h2 style="text-align: center; margin-bottom: 30px;">My Seminar</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <img src="images.3.jpg" alt="Seminar 1" class="project-image">
+                    <div class="project-content">
+                        <h3>iSITE</h3>
+                        <p>Integrated Society of Information Technology Enthusiasts</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="images.4.jpg" alt="Seminar 2" class="project-image">
+                    <div class="project-content">
+                        <h3>BITCON 2024</h3>
+                        <p>Navigating the Future of Technology: Integration, Innovation, and Security.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="images.5.jpg" alt="Seminar 3" class="project-image">
+                    <div class="project-content">
+                        <h3>SEBA</h3>
+                        <p>14th Annual Busimess Forum.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="images.6.jpg" alt="Seminar 4" class="project-image">
+                    <div class="project-content">
+                        <h3>HKNL</h3>
+                        <p>Hackin' Ka Na Lang.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="images.7.jpg" alt="Seminar 5" class="project-image">
+                    <div class="project-content">
+                        <h3>Jarvis</h3>
+                        <p>Jumpstarting Ai To Redefine Virtual Intelligence In Iot System.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="images.8.jpg" alt="Seminar 6" class="project-image">
+                    <div class="project-content">
+                        <h3>DATABIZ</h3>
+                        <p>Equipping Tomorrows Innovation with Data Science, Ai, And Business Analytics.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="images.9.jpg" alt="Seminar 7" class="project-image">
+                    <div class="project-content">
+                        <h3>Y4iT</h3>
+                        <p>Research Summit.</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
